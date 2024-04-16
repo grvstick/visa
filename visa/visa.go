@@ -159,6 +159,7 @@ func OpenResource(addr string, termchar byte) (*usbtmc.UsbTmc, error) {
 	if err != nil {
 		return nil, err
 	}
+
 	dev, err := usbtmc.NewDevice(v.manufacturerID, v.modelCode, v.serialNumber)
 
 	if err != nil {
